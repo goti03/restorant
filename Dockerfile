@@ -3,5 +3,5 @@ RUN yum update -y && \
     yum install -y httpd && \
     yum clean all
 COPY ./ /var/www/html/
-EXPOSE 80 22
+EXPOSE 80
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
